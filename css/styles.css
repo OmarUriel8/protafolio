@@ -1,0 +1,255 @@
+:root {
+	--fuentePrincipal: 'Roboto', sans-serif;
+	--fuenteHeading: 'Montserrat', sans-serif;
+	--grisOscuro: #353535;
+	--blanco: #ffffff;
+	--negro: #000000;
+	--azul: #d7effd;
+	--grisClaro: #cdcdcd;
+	--verde: #18a558;
+	--verdeClaro: #d4f5df;
+	--verdeOscuro: #1c854b;
+	--grisMenu: #303437;
+}
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%; /* Now 10px = 1rem! */
+}
+body {
+	font-size: 16px; /* px fallback */
+	font-size: 1.6rem; /* default font-size for document */
+	line-height: 1.5; /* a nice line-height */
+	font-family: var(--fuentePrincipal);
+	background: linear-gradient(to right, #c9eeea 0%, #2e8bc0 100%);
+}
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--fuenteHeading);
+	color: var(--grisOscuro);
+}
+h1 {
+	font-size: 3.8rem;
+}
+h2 {
+	font-size: 3.4rem;
+}
+h3 {
+	font-size: 3rem;
+}
+h4 {
+	font-size: 2.6rem;
+}
+.contenedor {
+	max-width: 1100px;
+	width: 90%;
+	margin: 0 auto;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+.boton {
+	display: block;
+	text-align: center;
+	padding: 1rem 3rem;
+	flex: 1;
+	margin: 1rem;
+	text-decoration: none;
+	border-radius: .5rem;
+	text-transform: uppercase;
+	border: none;
+}
+@media (min-width: 768px) {
+	.boton {
+		display: inline-block;
+		flex: 0 0 auto;
+	}
+}
+.boton:hover {
+	background-color: var(--verdeOscuro);
+}
+.boton-principal {
+	color: var(--blanco);
+	background-color: var(--verde);
+}
+.contenido-header {
+	background-color: var(--grisMenu);
+}
+.contenido-header nav {
+	display: flex;
+	flex-direction: column;
+	padding: 4rem 0;
+	align-items: center;
+}
+@media (min-width: 768px) {
+	.contenido-header nav {
+		flex-direction: row;
+		justify-content: space-evenly;
+		padding: 2rem 0;
+	}
+}
+.contenido-header nav a {
+	color: var(--blanco);
+	text-decoration: none;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+.contenido-header nav a:hover {
+	color: var(--grisClaro);
+}
+.contenido-header nav a:last-of-type {
+	margin-bottom: 0;
+}
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+}
+@media (min-width: 480px) {
+	.cards {
+		justify-content: space-evenly;
+	}
+	.ajustar-izquierda {
+		justify-content: space-between;
+	}
+}
+.card {
+	background-color: var(--azul);
+	box-shadow: 0px 0px 2rem var(--negro);
+	margin-bottom: 3rem;
+}
+.card:nth-child(odd) {
+	background-color: var(--verdeClaro);
+}
+@media (min-width: 768px) {
+	.card {
+		flex: 0 0 calc(50% - 2rem);
+	}
+}
+@media (min-width: 1200px) {
+	.card {
+		flex: 0 0 calc(33% - 2rem);
+	}
+}
+.card img {
+	height: 20rem;
+}
+.card .imagen {
+	position: relative;
+	height: 20rem;
+}
+@media (min-width: 1200px) {
+	.card .imagen::after {
+		content: '';
+		background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 100;
+		opacity: 1;
+		transition: opacity .5s ease-in-out;
+	}
+	.card .imagen:hover::after {
+		opacity: 0;
+	}
+	.card .imagen a {
+		opacity: 0.8;
+		transition: opacity .5s ease;
+	}
+	.card .imagen:hover a {
+		opacity: 1;
+		position: absolute;
+		z-index: 200;
+	}
+}
+.card .texto {
+	font-family: var(--fuentePrincipal);
+	padding: 1.4rem 1rem;
+	text-align: center;
+	line-height: 2;
+}
+.card .texto span {
+	font-weight: 700;
+	color: #2e8bc0;
+}
+.card .enlaces {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+@media (min-width: 768px) {
+	.card .enlaces {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+.contendo-footer {
+	background-color: var(--grisMenu);
+}
+.contendo-footer .texto {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 0;
+}
+@media (min-width: 768px) {
+	.contendo-footer .texto {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+}
+.contendo-footer .texto p {
+	color: var(--blanco);
+}
+h1 {
+	font-size: 4rem;
+	color: var(--grisOscuro);
+}
+.informacion {
+	font-family: var(--fuentePrincipal);
+	text-align: center;
+	color: var(--grisOscuro);
+	font-size: 2rem;
+}
+.espacio {
+	margin-top: 3rem;
+}
+.derecha {
+	text-align: right;
+	border-top: 1px solid var(--grisOscuro);
+}
+.centrar {
+	text-align: center;
+}
+.informacion span {
+	color: var(--negro);
+	font-style: italic;
+	font-size: 2.1rem;
+}
+.habilidades {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.habilidades li {
+	flex: 0 0 calc(50% - 2rem);
+}
+
+@media (min-width: 768px) {
+	.habilidades li {
+		flex: 0 0 calc(25% - 2rem);
+	}
+}
