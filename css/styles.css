@@ -81,6 +81,10 @@ img {
 	color: var(--blanco);
 	background-color: var(--verde);
 }
+.fondo-blanco {
+	background-color: var(--blanco);
+	padding: 1rem 3rem;
+}
 .contenido-header {
 	background-color: var(--grisMenu);
 }
@@ -220,15 +224,18 @@ h1 {
 .informacion {
 	font-family: var(--fuentePrincipal);
 	text-align: center;
+	background-color: #fdfdfd;
+	box-shadow: 0 0 10px #ecb6b6;
 	color: var(--grisOscuro);
 	font-size: 2rem;
+	padding: 1rem;
 }
 .espacio {
 	margin-top: 3rem;
 }
 .derecha {
 	text-align: right;
-	border-top: 1px solid var(--grisOscuro);
+	border-top: 1px solid var(--grisClaro);
 }
 .centrar {
 	text-align: center;
